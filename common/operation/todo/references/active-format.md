@@ -6,13 +6,13 @@
 
 ```md
 # P0
-- [ ] [需求标签] 待办事项简述 (YYYY-MM-DD) @path:src/foo/bar.ts @task-id:xxx @todo-id:xxx
+- [ ] [支付链路] 下线前移除 PaymentService 中的 mock 支付分支 (YYYY-MM-DD) @path:src/payment/PaymentService.ts @task-id:xxx @todo-id:xxx
 
 # P1
-- [ ] [需求标签] 待办事项简述 (YYYY-MM-DD)
+- [ ] [登录态] 为 SessionManager 补 token 过期后的统一兜底与刷新逻辑 (YYYY-MM-DD) @path:src/auth/SessionManager.ts @todo-id:xxx
 
 # P2
-- [ ] [需求标签] 待办事项简述 (YYYY-MM-DD) @path:src/baz/qux.ts
+- [ ] [会话列表] 合并 ConversationCell 与 NotificationCell 的重复样式拼装逻辑 (YYYY-MM-DD) @path:src/chat/ConversationCell.ts @todo-id:xxx
 ```
 
 ## 格式约束
@@ -25,8 +25,10 @@
 4. 描述必须一句话说清。如果关联class/function, 需要在描述中体现。
 5. 可选追加路径标记：`@path:<relative-path>`。
 6. 路径标记仅用于定位，不代表已完成；路径变更时应更新或移除标记，但任务仍保留。
-7. 如果关联文件, 且能关联到具体行, 需要在代码中标记todo注释, 用于todo反向追踪
-   1. 如 `// todo {todo完整内容, 与active.md一致, 并忽略@path}`
+7. 仅当当前本来就在修改该文件、且补一条行内注释能显著提升回溯效率时，才附加代码内 todo 注释。
+   1. 不为记录 ToDo 而额外打开或修改无关文件。
+   2. 注释内容应与 `active.md` 的任务文案一致，并忽略 `@path`。
+   3. 如 `// TODO: [登录态] 为 SessionManager 补 token 过期后的统一兜底与刷新逻辑 (2026-03-13) @todo-id:xxx`
 
 ## 优先级
 
