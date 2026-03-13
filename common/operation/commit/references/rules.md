@@ -13,6 +13,7 @@
 7. 提交前检查是否存在 `coding-workflow/plan.md`
    - 若存在，读取 `Task-ID` 并用于所有原子提交。
    - 若不存在，commit message 也要包含 `[task-id: 无]`, 不允许不写`task-id`模块
+8. 若存在活动 `coding-workflow/plan.md`，且本轮 commit 流程已完成，则必须在收尾阶段归档该 plan 并移除活动文件。
 
 ## 禁止
 

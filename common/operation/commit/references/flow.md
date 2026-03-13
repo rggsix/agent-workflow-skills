@@ -11,8 +11,9 @@
    - `git add` 对应文件。
    - 生成 commit message。
    - `git commit`。
-5. 循环执行步骤 2-4，直到工作区清空（`git status --short` 无输出）。
-6. 若遇到必须保留或无法归组的改动，暂停并请求人类明确指示。
+5. 若存在活动 `coding-workflow/plan.md`，且本轮 commit 流程已完成，则归档该 plan 并移除活动文件。
+6. 循环执行步骤 2-5，直到工作区清空（`git status --short` 无输出）。
+7. 若遇到必须保留或无法归组的改动，暂停并请求人类明确指示。
 
 ## 分组清单示例
 格式示例
