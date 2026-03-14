@@ -9,11 +9,13 @@
 3. 触发本 skill 后，完成标准是 `git` 工作区清空（无 staged/unstaged/untracked 改动）。
 4. 若存在必须保留的改动，需先获得人类明确指示，再按指示跳过。
 5. commit 前必须执行 `postcoding-todo` 做二次 ToDo 整理（除非人类明确要求跳过）。
-6. 未显式确认“已执行 postcoding-todo”，不得进入提交流程。
-7. 提交前检查是否存在 `coding-workflow/plan.md`
+6. commit 前必须执行 `project-memory` 做记忆补漏；若确认本轮无新增状态，也要显式说明“无需补写 project-memory”。
+7. 未显式确认“已执行 postcoding-todo”，不得进入提交流程。
+8. 未显式确认“已执行 project-memory”或“无需补写 project-memory”，不得进入提交流程。
+9. 提交前检查是否存在 `coding-workflow/plan.md`
    - 若存在，读取 `Task-ID` 并用于所有原子提交。
    - 若不存在，commit message 也要包含 `[task-id: 无]`, 不允许不写`task-id`模块
-8. 若存在活动 `coding-workflow/plan.md`，且本轮 commit 流程已完成，则必须在收尾阶段归档该 plan 并移除活动文件。
+10. 若存在活动 `coding-workflow/plan.md`，且本轮 commit 流程已完成，则必须在收尾阶段归档该 plan 并移除活动文件。
 
 ## 禁止
 
