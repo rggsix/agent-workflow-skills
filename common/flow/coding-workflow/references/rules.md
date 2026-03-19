@@ -12,7 +12,7 @@
 6. 项目记忆收尾（调用 `project-memory`，把当前状态、关键决策与最近进展写回持久记忆）
 
 ## 步骤与技能映射
-
+**每一步都要开启单独的 subagent 执行, 你负责监督与验收**
 1. 步骤1 意图对齐 -> `intent-align`
 2. 步骤2 规划 -> `planning`
 3. 步骤3 ToDo 同步（规划后） -> `precoding-todo`
