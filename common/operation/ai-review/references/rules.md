@@ -5,7 +5,7 @@
 ## 必须
 
 1. 输入范围：仅基于本轮改动 diff 与相关文件。
-2. 执行顺序（含循环）：
+2. 启动subagent能力, 调用对应 skill 执行顺序（含循环）：
    1. `ai-review` 调用 `spec-review`。
    2. 若 `spec-review` 有问题：`ai-review` 修复后 **重新执行 `spec-review`**，直到 `Spec OK` 或 `spec-review` 已执行超 3 次。
    3. `Spec OK` 后，`ai-review` 调用 `quality-review`。
