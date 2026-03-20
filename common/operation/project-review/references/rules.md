@@ -21,8 +21,11 @@
 ```text
 Project Review
 Checklist
-- file: path/to/File.swift | class: SomeClass | method: someMethod()
-- file: path/to/OtherFile.swift | class: N/A | method: N/A
+- file: path/to/File.swift | class: SomeClass
+    - method: someMethodA()
+    - method: someMethodB()
+- file: path/to/OtherFile.swift | class: N/A
+    - method: N/A
 
 Conclusion
 - result: Project Review OK
@@ -31,7 +34,9 @@ Conclusion
 ```text
 Project Review
 Checklist
-- file: path/to/File.swift | class: SomeClass | method: someMethod()
+- file: path/to/File.swift | class: SomeClass
+    - method: someMethodA()
+    - ...
 
 Conclusion
 - reason: [项目规范问题] 清晰且可执行的说明
