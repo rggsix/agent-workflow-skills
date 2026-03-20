@@ -43,8 +43,13 @@ Task-ID: YYYYMMDD-<seq>
 - [ ] 步骤2: 规划 [planning]
 - [ ] 步骤3: ToDo 同步（规划后） [precoding-todo]
 - [ ] 步骤4: 编码执行 [execute-coding]
-- [ ] 步骤5: AI review [ai-review]
-- [ ] 步骤6: 项目记忆收尾 [project-memory]
+- [ ] 步骤5: Project review [project-review]
+- [ ] 步骤6: AI review [ai-review]
+- [ ] 步骤7: 项目记忆收尾 [project-memory]
+
+## Project Review 记录（reviewer 输出）
+
+...
 
 ## AI Review 记录（reviewer 输出）
 
