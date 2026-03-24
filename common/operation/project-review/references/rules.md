@@ -15,8 +15,9 @@
    - Reviewed References：明确列出本次实际读取的 `project` 规范文件；若无 `project` skill，则不输出该段。
    - 检查清单：按 `文件 - 类 - 方法` 维度列出本轮已检查范围；若某文件无明确类或方法，使用 `N/A` 占位。
    - review 结论：明确写出 `Project Review OK` 或问题清单。
-6. 若发现问题，允许修复后重新执行 `project-review`，直到 `Project Review OK` 或 `project-review` 已执行超 3 次。
-7. 若达到次数上限仍有问题，触发 human-in-loop。
+6. 若 `dependencies.md` 存在 `matched` 项，必须继续检查其 `Dependency Follow-up` 是否已沿推荐入口读取至少一个真实实现文件，并给出“已正确复用 / 未复用 / Need verify”结论；缺少这一步，不得输出 `Project Review OK`。
+7. 若发现问题，允许修复后重新执行 `project-review`，直到 `Project Review OK` 或 `project-review` 已执行超 3 次。
+8. 若达到次数上限仍有问题，触发 human-in-loop。
 
 ## 输出格式
 
@@ -60,5 +61,6 @@ Conclusion
 - 存在 `project` skill 但未读取 `project/SKILL.md` 或相关必读引用，就输出 `Project Review OK`。
 - 不读代码只看描述。
 - 不输出 `Reviewed References` 就声称“已按项目规范 review”。
+- `dependencies.md` 已出现 `matched`，但没有继续读取真实实现文件，就输出 `Project Review OK`。
 - 跳过检查清单直接给结论。
 - 超出本轮改动范围扩展 review。
