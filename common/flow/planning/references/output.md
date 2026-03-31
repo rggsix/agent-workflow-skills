@@ -6,6 +6,7 @@
 ## 规划产出
 
 项目规范检查：...
+项目记忆恢复：...
 观察结果：...
 约束要点：...
 
@@ -35,6 +36,7 @@
 
 # 合格示例：
 ```
+项目记忆恢复：我将先读取 `project-memory` 的 `current.md` 与 `project-profile.md`，先恢复当前现场和长期稳定事实。
 项目规范检查：我将检查是否有 project 相关 skills；已发现 `project` skill，将阅读并尝试在本环节应用其中与本次任务相关的规范。
 
 1. 目标：`ChatSessionManager.swift` / `sendMessage()`
